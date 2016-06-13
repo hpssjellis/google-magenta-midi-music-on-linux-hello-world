@@ -148,20 +148,23 @@ echo ". "
 echo "Grab my github site to load a few batch files"
 cd ~/mymagenta
 
-git clone https://github.com/hpssjellis/my-google-magenta-installation.git
+git clone https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
 
 
 echo "copy bash files to the magenta workspace folder"
 echo "assumes any file starting with 'a' is a batch file"
 
-cd ~/mymagenta/my-google-magenta-installation
+cd ~/mymagenta/https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
 
-cp a* ~/mymagenta/magenta
+#cp a* ~/mymagenta/magenta
+
+cp a01-helloworld.sh ~/mymagenta/magenta
 
 
-echo "attempt to make the batch files runnable"
 
-sudo chmod +x a* ~/mymagenta/magenta
+echo "attempt to make the batch file a01-helloworld.sh runnable"
+
+sudo chmod +x ~/mymagenta/magenta/a01-helloworld.sh
 
 #bash a01-rocksetta-checks.sh
 
