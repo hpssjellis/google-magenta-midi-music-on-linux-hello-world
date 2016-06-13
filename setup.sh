@@ -158,6 +158,9 @@ cd ~/mymagenta/my-google-magenta-installation
 
 cp a* ~/mymagenta/magenta
 
+
+echo "attempt to make the batch files runnable"
+
 sudo chmod +x a* ~/mymagenta/magenta
 
 #bash a01-rocksetta-checks.sh
@@ -165,10 +168,10 @@ sudo chmod +x a* ~/mymagenta/magenta
 
 
 
+cd ~/mymagenta
 
 
-
-echo "Now installl Google Magenta"
+echo "Now install Google Magenta"
 
 git clone https://github.com/tensorflow/magenta.git
 
