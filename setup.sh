@@ -155,20 +155,20 @@ cd ~/mymagenta
 git clone https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
 
 
-echo "copy bash files to the magenta workspace folder"
-echo "assumes any file starting with 'a' is a batch file"
+echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
 
-cd ~/mymagenta/https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
+
+#cd ~/mymagenta/google-magenta-midi-music-on-linux-hello-world
 
 #cp a* ~/mymagenta/magenta
 
-cp a01-helloworld.sh ~/mymagenta/magenta
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta
 
 
 
 echo "attempt to make the batch file a01-helloworld.sh runnable"
 
-sudo chmod a+x ~/mymagenta/magenta/a01-helloworld.sh
+chmod a+x ~/mymagenta/magenta/a01-helloworld.sh
 
 #bash a01-rocksetta-checks.sh
 
