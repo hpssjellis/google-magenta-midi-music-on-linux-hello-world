@@ -73,10 +73,17 @@ bazel run //magenta/models:basic_rnn_generate -- \
 --primer_midi=$PRIMER_PATH \
 --output_dir=/tmp/basic_rnn_generated \
 --num_steps=64 \
---num_outputs=16
+--num_outputs=2
 
 
+echo "install a midi player like timidity"
+echo ""
+echo "play it using the command line"
+echo "timidity basic_run_sample_0.mid"
+echo "or copy it to an online account such as https://clyp.it/"
 
+cd /tmp/basic_rnn_generated
 
+ls
 
 
