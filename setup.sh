@@ -229,6 +229,16 @@ mkdir /tmp/basic_rnn/run1
 mkdir /tmp/basic_rnn/run2
 mkdir /tmp/basic_rnn/run3
 
+ln -s /tmp link-to-tmp
+ln -s /tmp/basic_rnn_generated link-to-generated
+ln -s magenta/testdata link-to-midi-files
+ln -s magenta/testdata/modeles/basic_rnn/ link-to-primer
+
+
+
+
+
+
 
 
 
