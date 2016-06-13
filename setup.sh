@@ -36,11 +36,15 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-ins
 
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
+
+echo "Presently these next two commands not working well. May have to do from the command line"
+
 sudo bash bazel-0.2.3-installer-linux-x86_64.sh --user
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
 
-export PATH="$PATH:~/bin"
-rm bazel-0.2.3-installer-linux-x86_64.sh
+export PATH=$PATH:~/bin
+#export PATH="$PATH:~/bin"
+#rm bazel-0.2.3-installer-linux-x86_64.sh
 
 echo "Just test if bazel is working"
 
