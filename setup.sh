@@ -208,12 +208,22 @@ cd ~/mymagenta/magenta
 
 
 
+echo "Might as well build the training file structure here"
+bazel build //magenta/models:basic_rnn_train
+
+echo "and setup a spot for temporary files"
+echo "not sure if magenta can make the folders for you????"
+
+mkdir /tmp/basic_rnn
+mkdir /tmp/basic_rnn/run1
+mkdir /tmp/basic_rnn/run2
+mkdir /tmp/basic_rnn/run3
 
 
 
 
 
-
+echo "Not sure if all these checks are really needed, but they can't hurt"
 echo "First checking the Python version"
 python --version
 
@@ -298,8 +308,6 @@ echo "If not just open a new folder and type bash <name of hello-world.sh progra
 cd ~/mymagenta/magenta
 
 
-echo "Might as well build the training file structure here"
-bazel build //magenta/models:basic_rnn_train
 
 
 echo "running tensorboard, open a new terminal to run the other programs"
