@@ -168,7 +168,7 @@ cp a01-helloworld.sh ~/mymagenta/magenta
 
 echo "attempt to make the batch file a01-helloworld.sh runnable"
 
-sudo chmod +x ~/mymagenta/magenta/a01-helloworld.sh
+sudo chmod a+x ~/mymagenta/magenta/a01-helloworld.sh
 
 #bash a01-rocksetta-checks.sh
 
