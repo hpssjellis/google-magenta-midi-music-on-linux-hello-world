@@ -51,10 +51,14 @@ echo "Just test if bazel is working"
 bazel -h
 
 
+
 echo "Needed if you open a new terminal to reset the path to bazel"
 printf "\n\nexport PATH=\$PATH:~/bin"  >> ~/.bashrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
+echo "Did bazel install?"
+read
+
 
 
 cd ~/mymagenta
@@ -162,8 +166,10 @@ echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
 
 #cp a* ~/mymagenta/magenta
 
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
+#cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
 
+cd google-magenta-midi-music-on-linux-hello-world
+cp a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
 
 
 #echo "attempt to make the batch file a01-helloworld.sh runnable"
@@ -233,7 +239,9 @@ mkdir /tmp/basic_rnn_generated link-to-generated
 ln -s /tmp link-to-tmp
 ln -s /tmp/basic_rnn_generated link-to-generated
 ln -s ~/mymagenta/magenta/magenta/testdata link-to-midi-files
-ln -s ~/mymagenta/magenta/magenta//modeles/basic_rnn link-to-primer
+ln -s ~/mymagenta/magenta/magenta/modeles/basic_rnn link-to-primer
+
+
 
 
 
