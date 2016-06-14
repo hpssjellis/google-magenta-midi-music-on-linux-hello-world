@@ -162,7 +162,7 @@ echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
 
 #cp a* ~/mymagenta/magenta
 
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
 
 
 
