@@ -232,8 +232,12 @@ mkdir /tmp/basic_rnn_generated link-to-generated
 
 ln -s /tmp link-to-tmp
 ln -s /tmp/basic_rnn_generated link-to-generated
-ln -s ~/mymagenta/magenta/testdata link-to-midi-files
-ln -s ~/mymagenta/magenta/testdata/modeles/basic_rnn/ link-to-primer
+ln -s ~/mymagenta/magenta/magenta/testdata link-to-midi-files
+ln -s ~/mymagenta/magenta/magenta//modeles/basic_rnn link-to-primer
+
+
+
+
 
 
 
