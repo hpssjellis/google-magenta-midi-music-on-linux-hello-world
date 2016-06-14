@@ -348,10 +348,14 @@ echo "If not just open a new folder and type bash <name of hello-world.sh progra
 
 cd ~/mymagenta/magenta
 
+echo "Lest be brave and try to run the hello music AI world bash file"
+echo "a01-helloworld.sh should have been copied into the magenta workspace"
 
+bash a01-helloworld.sh
 
 
 echo "running tensorboard, open a new terminal to run the other programs"
+echo "open your browser to tensorboard at the url given as output"
 echo "ctrl-C to quit tensorboard"
 
 tensorboard --logdir=/tmp/basic_rnn
