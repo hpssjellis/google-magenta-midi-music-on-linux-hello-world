@@ -56,7 +56,8 @@ echo "Needed if you open a new terminal to reset the path to bazel"
 printf "\n\nexport PATH=\$PATH:~/bin"  >> ~/.bashrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
-echo "Did bazel install?"
+echo "Did bazel install? Should see the bazel help info"
+echo "If not ctrl-C and find out the mistake, probably the path in ~/.bashrc"
 read
 
 
@@ -147,6 +148,15 @@ echo ". "
 
 
 
+
+cd ~/mymagenta
+
+
+echo "Now install Google Magenta"
+
+git clone https://github.com/tensorflow/magenta.git
+
+
 #broken link to tensorflow???
 
 #ln -s ~/virtual-tf/lib/python2.7/site-packages/tensorflow ~/mymagenta/pip-tensorflow-link
@@ -166,7 +176,7 @@ echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
 
 #cp a* ~/mymagenta/magenta
 
-mv ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
 
 #cd google-magenta-midi-music-on-linux-hello-world
 
@@ -180,15 +190,6 @@ mv ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh 
 
 #bash a01-rocksetta-checks.sh
 
-
-
-
-cd ~/mymagenta
-
-
-echo "Now install Google Magenta"
-
-git clone https://github.com/tensorflow/magenta.git
 
 
 
@@ -237,6 +238,11 @@ mkdir /tmp/basic_rnn/run1
 mkdir /tmp/basic_rnn/run2
 mkdir /tmp/basic_rnn/run3
 mkdir /tmp/basic_rnn_generated
+
+
+
+
+echo "Add a few symlinks to make life easier"
 
 ln -s /tmp link-to-tmp
 ln -s /tmp/basic_rnn_generated link-to-generated
