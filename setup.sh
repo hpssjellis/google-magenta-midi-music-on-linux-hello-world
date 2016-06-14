@@ -42,8 +42,8 @@ echo "Presently these next two commands not working well. May have to do from th
 sudo bash bazel-0.2.3-installer-linux-x86_64.sh --user
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
 
-export PATH=$PATH:~/bin
-#export PATH="$PATH:~/bin"
+#export PATH=$PATH:~/bin
+export PATH="$PATH:~/bin"
 #rm bazel-0.2.3-installer-linux-x86_64.sh
 
 echo "Just test if bazel is working"
@@ -124,14 +124,14 @@ echo "exporting the Path to my .bashrc file so other terminals have the path"
 
 # ????????????????? was working without this, check that ist still works ??????????????????
 
-printf "\n\nexport TENSORFLOW_HOME=~/mymagenta/tensorflow/tensorflow\nexport PATH=\$PATH:\$TENSORFLOW_HOME/bin"  >> ~/.bashrc
+#printf "\n\nexport TENSORFLOW_HOME=~/mymagenta/tensorflow/tensorflow\nexport PATH=\$PATH:\$TENSORFLOW_HOME/bin"  >> ~/.bashrc
 
 
-echo "exporting the path for this terminal so that commands work"
+#echo "exporting the path for this terminal so that commands work"
 
 
-export TENSORFLOW_HOME=~/mymagenta/tensorflow/tensorflow
-export PATH=$PATH:$TENSORFLOW_HOME/bin
+#export TENSORFLOW_HOME=~/mymagenta/tensorflow/tensorflow
+#export PATH=$PATH:$TENSORFLOW_HOME/bin
 
 
 
