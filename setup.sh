@@ -247,7 +247,8 @@ echo "Add a few symlinks to make life easier"
 ln -s /tmp a-link-to-tmp
 ln -s /tmp/basic_rnn_generated a-link-to-generated-midi
 ln -s ~/mymagenta/magenta/magenta/testdata a-link-to-your-midi
-ln -s ~/mymagenta/magenta/magenta/modeles/basic_rnn a-link-to-primer-midi
+ls -s ~/mymagenta/magenta/magenta/models/basic_rnna-link-to-primer-midi
+
 
 
 
