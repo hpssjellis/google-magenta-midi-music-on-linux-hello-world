@@ -73,7 +73,7 @@ bazel run //magenta/models:basic_rnn_generate -- \
 --primer_midi=$PRIMER_PATH \
 --output_dir=/tmp/basic_rnn_generated \
 --num_steps=64 \
---num_outputs=2
+--num_outputs=5
 
 
 echo "install a midi player like timidity"
