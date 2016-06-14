@@ -80,7 +80,7 @@ echo "install a midi player like timidity"
 echo ""
 echo "play it using the command line"
 echo "timidity basic_run_sample_0.mid"
-echo "or copy it to an online account such as https://clyp.it/"
+echo "or copy it to an online midi site such as https://onlinesequencer.net/"
 
 cd /tmp/basic_rnn_generated
 
