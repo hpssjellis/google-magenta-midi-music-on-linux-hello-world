@@ -24,10 +24,10 @@ bash setup.sh
 
 1. Theoretically that should be it. **setup.sh** installs into a home folder called mymagenta a folder called Google Magenta. It also installs bazel and tensorflow. Sets up some symlinks in the magenta workspace, builds a few extra folders. If all goes well it runs the bash file **a01-helloworld.sh** which runs a combined set of the example programs with only 200 interactions instead of 20000. Then it finally activates tensorboard
 
-Your final 3 midi examples end up in the /tmp/basic_rnn_generated folder and then copy the midi files to however you want to play them. I installed timidity but there has to be something better out there.
+Your final 5 midi examples end up in the **/tmp/basic_rnn_generated** folder and then copy the midi files to however you want to play them. I installed timidity to play the midi files but have now started using https://onlinesequencer.net/
 
 
-Then start using your own midi files and your own primer.mid file and change variables and iterations. I would like to make another helloWorld that tidies up where are these temporary files go, presently it is a mess for beginners
+Then start using your own midi files and your own primer.mid file and change variables and iterations. I would like to make another helloWorld that tidies up where all these temporary files go, presently it is a mess for beginners
 
 
 
