@@ -166,10 +166,12 @@ echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
 
 #cp a* ~/mymagenta/magenta
 
-#cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
+mv ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
 
-cd google-magenta-midi-music-on-linux-hello-world
-cp a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
+#cd google-magenta-midi-music-on-linux-hello-world
+
+#mv a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
+
 
 
 #echo "attempt to make the batch file a01-helloworld.sh runnable"
@@ -234,7 +236,7 @@ mkdir /tmp/basic_rnn
 mkdir /tmp/basic_rnn/run1
 mkdir /tmp/basic_rnn/run2
 mkdir /tmp/basic_rnn/run3
-mkdir /tmp/basic_rnn_generated link-to-generated
+mkdir /tmp/basic_rnn_generated
 
 ln -s /tmp link-to-tmp
 ln -s /tmp/basic_rnn_generated link-to-generated
