@@ -166,9 +166,9 @@ cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh 
 
 
 
-echo "attempt to make the batch file a01-helloworld.sh runnable"
+#echo "attempt to make the batch file a01-helloworld.sh runnable"
 
-chmod a+x ~/mymagenta/magenta/a01-helloworld.sh
+#chmod a+x ~/mymagenta/magenta/a01-helloworld.sh
 
 #bash a01-rocksetta-checks.sh
 
@@ -228,11 +228,12 @@ mkdir /tmp/basic_rnn
 mkdir /tmp/basic_rnn/run1
 mkdir /tmp/basic_rnn/run2
 mkdir /tmp/basic_rnn/run3
+mkdir /tmp/basic_rnn_generated link-to-generated
 
 ln -s /tmp link-to-tmp
 ln -s /tmp/basic_rnn_generated link-to-generated
-ln -s magenta/testdata link-to-midi-files
-ln -s magenta/testdata/modeles/basic_rnn/ link-to-primer
+ln -s ~/mymagenta/magenta/testdata link-to-midi-files
+ln -s ~/mymagenta/magenta/testdata/modeles/basic_rnn/ link-to-primer
 
 
 
