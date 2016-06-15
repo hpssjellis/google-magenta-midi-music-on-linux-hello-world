@@ -354,6 +354,8 @@ echo "a01-helloworld.sh should have been copied into the magenta workspace"
 
 bash a01-helloworld.sh
 
+echo "Import your midi files from /tmp/basic_rnn_generated to https://onlinesequencer.net/"
+echo""
 
 echo "running tensorboard, open a new terminal to run the other programs"
 echo "open your browser to http://0.0.0.0:6006 to run"
