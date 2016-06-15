@@ -2,8 +2,27 @@
 Bash install scripts to get Google Magenta working easily on a linux ubuntu computer. Move from a folder with several midi files to a tensorflow generated set of output files. 
 
 
+June 14, 2016 (evening) Darn. https://github.com/tensorflow/magenta changed something today that broke my script. For some reason this code does not work. I know **lib/encoders.py** has been renamed to **lib/basic_one_hot_encoder_test.py**
 
-June 14, 2016
+
+~~~
+
+bazel run //magenta:convert_sequences_to_melodies -- \
+--input=$SEQUENCES_TFRECORD \
+--train_output=$TRAIN_DATA \
+--eval_output=$EVAL_DATA \
+--eval_ratio=$EVAL_RATIO \
+--encoder=$ENCODER
+
+
+
+~~~
+
+
+
+
+
+June 14, 2016 (morning)
 
 This works, still testing it. No idea if it will work on your computer but it does work on my ubuntu version 15.10 laptop
 
