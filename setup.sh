@@ -245,6 +245,7 @@ mkdir /tmp/basic_rnn_generated
 echo "Add a few symlinks to make life easier"
 
 ln -s /tmp a-link-to-tmp
+ls -s /tmp/basic_rnn a-link-to-run-folder
 ln -s /tmp/basic_rnn_generated a-link-to-generated-midi
 ln -s ~/mymagenta/magenta/magenta/testdata a-link-to-your-midi
 ls -s ~/mymagenta/magenta/magenta/models/basic_rnn a-link-to-primer-midi
