@@ -356,8 +356,13 @@ bash a01-helloworld.sh
 
 
 echo "running tensorboard, open a new terminal to run the other programs"
-echo "open your browser to tensorboard at the url given as output"
-echo "ctrl-C to quit tensorboard"
+echo "open your browser to http://0.0.0.0:6006 to run"
+echo "If port already in use to open the port then run"
+echo "fuser 6006/tcp -k"
+echo ""
+echo "tensorboard command is"
+echo "tensorboard --logdir=/tmp/basic_rnn"
+echo "ctrl-C to quit tensorboard, Note: this must be the last command in this batch file"
 
 tensorboard --logdir=/tmp/basic_rnn
 
