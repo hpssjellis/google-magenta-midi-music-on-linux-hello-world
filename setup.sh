@@ -83,7 +83,7 @@ echo ". "
 
 
 
-echo "Activate the environemtn use deactivate to get your cursor back"
+echo "Activate the environment use deactivate to get your cursor back"
 source ~/virtual-tf/bin/activate 
 
 printf "\n\nsource ~/virtual-tf/bin/activate "  >> ~/.bashrc
@@ -123,7 +123,7 @@ sudo pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-
 
 
 
-echo "exporting the Path to my .bashrc file so other terminals have the path"
+#echo "exporting the Path to my .bashrc file so other terminals have the path"
 
 
 
@@ -163,7 +163,7 @@ git clone https://github.com/tensorflow/magenta.git
 
 
 
-echo "Grab my github site to load a few batch files"
+echo "Grab my github site to load a few bash files"
 cd ~/mymagenta
 
 git clone https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
@@ -245,10 +245,10 @@ mkdir /tmp/basic_rnn_generated
 echo "Add a few symlinks to make life easier"
 
 ln -s /tmp a-link-to-tmp
-ls -s /tmp/basic_rnn a-link-to-run-folder
+ln -s /tmp/basic_rnn a-link-to-basic_rnn-run
 ln -s /tmp/basic_rnn_generated a-link-to-generated-midi
 ln -s ~/mymagenta/magenta/magenta/testdata a-link-to-your-midi
-ls -s ~/mymagenta/magenta/magenta/models/basic_rnn a-link-to-primer-midi
+ln -s ~/mymagenta/magenta/magenta/models/basic_rnn a-link-to-primer-midi
 
 
 
