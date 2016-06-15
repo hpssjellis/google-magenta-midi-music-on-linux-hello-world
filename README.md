@@ -2,10 +2,26 @@
 Bash install scripts to get Google Magenta working easily on a linux ubuntu computer. Move from a folder with several midi files to a tensorflow generated set of output files. 
 
 
-June 14, 2016 (evening) Darn. https://github.com/tensorflow/magenta changed something today that broke my script. For some reason this code does not work. I know **lib/encoders.py** has been renamed to **lib/basic_one_hot_encoder_test.py**
+June 14, 2016 (evening) Darn. Murphy's Law. The day I tweet that this site is up and running https://github.com/tensorflow/magenta changed something that broke my script! For some reason this code does not work. I know **lib/encoders.py** has been renamed to **lib/basic_one_hot_encoder_test.py** but that should not be relevant. The script can't seem to find **convert_sequences_to_melodies**
 
 
 ~~~
+
+# TFRecord file containing NoteSequence protocol buffers from convert_midi_dir_to_note_sequences.py.
+SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
+
+# TFRecord file that TensorFlow's SequenceExample protos will be written to. This is the training dataset.
+TRAIN_DATA=/tmp/training_melodies.tfrecord
+
+# Optional evaluation dataset. Also, a TFRecord file containing SequenceExample protos.
+EVAL_DATA=/tmp/evaluation_melodies.tfrecord
+
+# Fraction of input data that will be written to the eval dataset (if eval_output flag is set).
+EVAL_RATIO=0.10
+
+# Name of the encoder to use. See magenta/lib/encoders.py.
+ENCODER=basic_one_hot_encoder
+
 
 bazel run //magenta:convert_sequences_to_melodies -- \
 --input=$SEQUENCES_TFRECORD \
