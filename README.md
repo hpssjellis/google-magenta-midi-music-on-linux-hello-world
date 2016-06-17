@@ -3,9 +3,9 @@ Bash install scripts to get Google Magenta working easily on a linux ubuntu comp
 
 June 17, 2016
 
-Just tried this on a fresh ubuntu version 14.04 installation and it worked fine except for tensoprboard since I did not install LAMP.
+Just tried this on a fresh ubuntu version 14.04 server 64 bit installation (I had the CD lying around and an old computer to put it on) and it worked fine except for tensorboard since I did not install LAMP.
 
-Also had to install git on a fresh install so I included the bash file a03-extra-installs.sh which installs git and timidity. To run  it enter the command
+Also had to install "git" on a fresh install so I included the bash file a03-extra-installs.sh which installs git and timidity (command line midi player). To run it enter the command
 
 
 
