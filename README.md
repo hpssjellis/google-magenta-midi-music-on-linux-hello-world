@@ -1,6 +1,21 @@
 # google-magenta-midi-music-on-linux-hello-world
 Bash install scripts to get Google Magenta working easily on a linux ubuntu computer. Move from a folder with several midi files to a tensorflow generated set of output files. 
 
+June 17, 2016
+
+Just tried this on a fresh ubuntu version 14.04 installation and it worked fine except for tensoprboard since I did not install LAMP.
+
+Also had to install git on a fresh install so I included the bash file a03-extra-installs.sh which installs git and timidity. To run  it enter the command
+
+
+
+```
+bash a03-extra-installs.sh
+```
+
+
+
+
 
 June 15, 2016
 
