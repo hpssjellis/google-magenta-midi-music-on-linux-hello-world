@@ -56,8 +56,9 @@ echo "Needed if you open a new terminal to reset the path to bazel"
 printf "\n\nexport PATH=\$PATH:~/bin"  >> ~/.bashrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
+echo ""
 echo "Did bazel install? Should see the bazel help info"
-echo "If not ctrl-C and find out the mistake, probably the path in ~/.bashrc"
+echo "Press enter, if issues press ctrl-C and find out the mistake, probably the path in ~/.bashrc"
 read
 
 
@@ -365,7 +366,7 @@ echo "fuser 6006/tcp -k"
 echo ""
 echo "tensorboard command is"
 echo "tensorboard --logdir=/tmp/basic_rnn"
-echo "ctrl-C to quit tensorboard, Note: this must be the last command in this batch file"
+echo "If things don't seem correct ctrl-C to quit tensorboard, Note: this must be the last command in this batch file"
 
 tensorboard --logdir=/tmp/basic_rnn
 
