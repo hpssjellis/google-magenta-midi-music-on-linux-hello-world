@@ -77,14 +77,9 @@ bazel run //magenta/models:basic_rnn_generate -- \
 --num_outputs=5
 
 
-echo "install a midi player like timidity"
 echo ""
-echo "play it using the command line"
-echo "timidity basic_run_sample_0.mid"
-echo "or copy it to an online midi site such as https://onlinesequencer.net/"
-
-cd /tmp/basic_rnn_generated
-
-ls
+echo "Hopefully everything worked"
+echo "Look in the folder /tmp/basic_rnn_generated to see yout output"
+echo "I copy the files to Google Drive and use iCloud to play them, but try whatever works for you."
 
 
