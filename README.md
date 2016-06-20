@@ -15,7 +15,7 @@ or at the playlist at https://youtu.be/RbF_7LQJ9Go?list=PL57Dnr1H_egvXDT3NIne7YQ
 
 [![Instructional video at]
 (http://img.youtube.com/vi/RbF_7LQJ9Go/0.jpg)]
-(https://youtu.be/ReaxoSIM5XQ)
+(https://youtu.be/RbF_7LQJ9Go?list=PL57Dnr1H_egvXDT3NIne7YQY54Rx8fS6J)
 
 
 
