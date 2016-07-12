@@ -73,8 +73,8 @@ bazel run //magenta/models:basic_rnn_generate -- \
 --hparams='{"rnn_layer_sizes":[50]}' \
 --primer_midi=$PRIMER_PATH \
 --output_dir=/tmp/basic_rnn_generated \
---num_steps=64 \
---num_outputs=5
+--num_steps=640 \
+--num_outputs=1
 
 
 echo ""
