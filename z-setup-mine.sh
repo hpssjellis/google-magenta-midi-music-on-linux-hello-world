@@ -59,7 +59,7 @@ printf "\n\nexport PATH=\$PATH:~/bin"  >> ~/.bashrc
 echo ""
 echo "Did bazel install? Should see the bazel help info"
 echo "Press enter, if issues press ctrl-C and find out the mistake, probably the path in ~/.bashrc"
-read
+#read
 
 
 
