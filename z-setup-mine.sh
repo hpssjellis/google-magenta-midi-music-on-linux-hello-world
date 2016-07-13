@@ -182,13 +182,13 @@ echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
 #cd ~/mymagenta/google-magenta-midi-music-on-linux-hello-world
 
 #cp a* ~/mymagenta/magenta
-
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a02-just-primer.sh  ~/mymagenta/magenta/a02-just-primer.sh h
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a02-new-primer-longer-output.sh  ~/mymagenta/magenta/a02-new-primer-longer-output.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a03-extra-installs.sh ~/mymagenta/magenta/a03-extra-installs.sh
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a04-midi-to-mp3 ~/mymagenta/magenta/a04-midi-to-mp3
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a04-midi-to-mp3.sh ~/mymagenta/magenta/a04-midi-to-mp3.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a06-new-learn.sh ~/mymagenta/magenta/a06-new-learn.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a05-new-short.sh ~/mymagenta/magenta/a05-new-short.sh
+
 
 
 
