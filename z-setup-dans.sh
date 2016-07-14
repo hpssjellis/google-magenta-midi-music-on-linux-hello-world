@@ -164,8 +164,9 @@ echo "Now install Google Magenta"
 
 #using Dan's from google test site
 
-git clone https://github.com/danabo/magenta.git
+#git clone https://github.com/danabo/magenta.git
 
+git clone https://github.com/danabo/magenta/tree/basic_rnn_checkpoint_fix.git
 
 
 #broken link to tensorflow???
