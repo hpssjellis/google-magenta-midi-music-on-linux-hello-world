@@ -166,7 +166,13 @@ echo "Now install Google Magenta"
 
 #git clone https://github.com/danabo/magenta.git
 
-git clone https://github.com/danabo/magenta/tree/basic_rnn_checkpoint_fix.git
+#the below did not work since it is on a branch from the master
+#git clone https://github.com/danabo/magenta/tree/basic_rnn_checkpoint_fix.git
+
+git clone https://github.com/danabo/magenta.git:basic_rnn_checkpoint_fix
+
+
+
 
 
 #broken link to tensorflow???
