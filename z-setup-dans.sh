@@ -169,8 +169,12 @@ echo "Now install Google Magenta"
 #the below did not work since it is on a branch from the master
 #git clone https://github.com/danabo/magenta/tree/basic_rnn_checkpoint_fix.git
 
-git clone https://github.com/danabo/magenta.git:basic_rnn_checkpoint_fix
+#git clone https://github.com/danabo/magenta.git:basic_rnn_checkpoint_fix
 
+
+# now this works!
+
+git clone https://github.com/danabo/magenta.git --branch basic_rnn_checkpoint_fix
 
 
 
