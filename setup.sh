@@ -177,12 +177,12 @@ echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
 
 #cp a* ~/mymagenta/magenta
 
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-helloworld.sh ~/mymagenta/magenta/a01-helloworld.sh
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a02-new-primer-longer-output.sh  ~/mymagenta/magenta/a02-new-primer-longer-output.sh
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-rnn_basic.sh ~/mymagenta/magenta/a01-rnn_basic.sh
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a02-rnn_basic_retrain.sh  ~/mymagenta/magenta/a02-rnn_basic_retrain.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a03-extra-installs.sh ~/mymagenta/magenta/a03-extra-installs.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a04-midi-to-mp3.sh ~/mymagenta/magenta/a04-midi-to-mp3.sh
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a06-new-learn.sh ~/mymagenta/magenta/a06-new-learn.sh
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a05-new-short.sh ~/mymagenta/magenta/a05-new-short.sh
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a05-lookback.sh ~/mymagenta/magenta/a05-lookback.sh
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a06-attention.sh ~/mymagenta/magenta/a06-attention.sh
 
 
 
@@ -252,11 +252,8 @@ bazel build //magenta/models/attention_rnn:attention_rnn_train
 echo "and setup a spot for temporary files"
 echo "not sure if magenta can make the folders for you????"
 
-mkdir /tmp/basic_rnn
-mkdir /tmp/basic_rnn/run1
-mkdir /tmp/basic_rnn/run2
-mkdir /tmp/basic_rnn/run3
-mkdir /tmp/basic_rnn_generated
+
+mkdir /tmp/basic_rnn/generated
 
 
 
@@ -265,7 +262,8 @@ echo "Add a few symlinks to make life easier"
 
 ln -s /tmp a-link-to-tmp
 ln -s /tmp/basic_rnn a-link-to-basic_rnn-run
-ln -s /tmp/basic_rnn_generated a-link-to-generated-midi
+#ln -s /tmp/basic_rnn_generated a-link-to-generated-midi
+ln -s /tmp/basic_rnn/generated a-link-to-basic_rnn-generated
 ln -s ~/mymagenta/magenta/magenta/testdata a-link-to-your-midi
 ln -s ~/mymagenta/magenta/magenta/models/basic_rnn a-link-to-primer-midi
 
