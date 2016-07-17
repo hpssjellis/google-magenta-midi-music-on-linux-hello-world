@@ -63,7 +63,7 @@ TRAIN_DATA=/tmp/training_melodies.tfrecord
 #Instead of using --primer_melody, 
 # we can use --primer_midi to prime our model with a melody stored in a MIDI file.
 
-#--primer_midi=~/mymagenta/magenta/magenta/models/basic_rnn/primer.mid
+#--primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
 
 
 
@@ -80,6 +80,5 @@ bazel run //magenta/models/attention_rnn:attention_rnn_generate -- \
 
 
 echo ""
-echo "Hopefully everything worked"
 echo "Look in the folder /tmp/basic_rnn_generated to see yout output"
-echo "I copy the files to Google Drive and use iCloud to play them, but try whatever works for you."
+
