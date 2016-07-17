@@ -254,23 +254,23 @@ echo "not sure if magenta can make the folders for you????"
 
 
 mkdir /tmp/basic_rnn/generated
+mkdir /tmp/lookback_rnn/generated
+mkdir /tmp/attention_rnn/generated
 
 
 
 
 echo "Add a few symlinks to make life easier"
 
-ln -s /tmp a09-link-to-tmp
-ln -s /tmp/basic_rnn a03-link-to-basic_rnn-run
 #ln -s /tmp/basic_rnn_generated a-link-to-generated-midi
-ln -s /tmp/basic_rnn/generated a04-link-to-basic_rnn-generated
 ln -s ~/mymagenta/magenta/magenta/testdata a01-link-to-your-midi
 ln -s ~/mymagenta/magenta/magenta/models/shared a02-link-to-primer-midi
 
-
-
+ln -s /tmp a03-link-to-tmp-all-runs
+ln -s /tmp/basic_rnn/generated a04-link-to-basic_rnn-generated
 ln -s /tmp/lookback_rnn/generated a05-link-to-lookback-generated
 ln -s /tmp/attention_rnn/generated a06-link-to-attention-generated
+
 
 
 
