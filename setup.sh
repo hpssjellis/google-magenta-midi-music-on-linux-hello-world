@@ -269,6 +269,10 @@ ln -s ~/mymagenta/magenta/magenta/models/shared a02-link-to-primer-midi
 
 
 
+ln -s /tmp/lookback_rnn/generated a05-link-to-lookback-generated
+ln -s /tmp/attention_rnn/generated a06-link-to-attention-generated
+
+
 
 
 
