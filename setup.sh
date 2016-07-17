@@ -365,7 +365,7 @@ cd ~/mymagenta/magenta
 echo "Lest be brave and try to run the hello music AI world bash file"
 echo "a01-helloworld.sh should have been copied into the magenta workspace"
 
-bash a01-helloworld.sh
+bash a01-rnn_basic.sh
 
 echo "Import your midi files from /tmp/basic_rnn_generated to https://onlinesequencer.net/"
 echo""
