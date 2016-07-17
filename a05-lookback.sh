@@ -1,17 +1,16 @@
 #!/bin/bash
 
-
-
-#this file only does the train and create midi output.
-
-
-
 MIDI_DIRECTORY=~/mymagenta/magenta/magenta/testdata
 
 
 # TFRecord file that will contain NoteSequence protocol buffers.
 SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
 
+
+bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
+--midi_dir=$MIDI_DIRECTORY \
+--output_file=$SEQUENCES_TFRECORD \
+--recursive
 
 
 
@@ -30,13 +29,15 @@ EVAL_DATA=/tmp/evaluation_melodies.tfrecord
 EVAL_RATIO=0.10
 
 # Name of the encoder to use. See magenta/lib/encoders.py.
-ENCODER=basic_one_hot_encoder
+#ENCODER=basic_one_hot_encoder
 
 
 
-
-
-
+bazel run //magenta/models/lookback_rnn:lookback_rnn_create_dataset -- \
+--input=/tmp/notesequences.tfrecord \
+--train_output=/tmp/lookback_rnn/sequence_examples/training_melodies.tfrecord \
+--eval_output=/tmp/lookback_rnn/sequence_examples/eval_melodies.tfrecord \
+--eval_ratio=0.10
 
 
 
@@ -46,11 +47,11 @@ ENCODER=basic_one_hot_encoder
 TRAIN_DATA=/tmp/training_melodies.tfrecord
 
 
-
-./bazel-bin/magenta/models/basic_rnn_train --experiment_run_dir=/tmp/basic_rnn/run1 --sequence_example_file=$TRAIN_DATA --eval=false --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=500
-
-
-
+./bazel-bin/magenta/models/lookback_rnn/lookback_rnn_train \
+--run_dir=/tmp/lookback_rnn/logdir/run1 \
+--sequence_example_file=/tmp/lookback_rnn/sequence_examples/training_melodies.tfrecord \
+--hparams="{'batch_size':64,'rnn_layer_sizes':[64,64]}" \
+--num_training_steps=200
 
 
 
@@ -61,18 +62,16 @@ TRAIN_DATA=/tmp/training_melodies.tfrecord
 # primer.mid is provided as an example.
 PRIMER_PATH=~/mymagenta/magenta/magenta/models/basic_rnn/primer.mid
 
-bazel run //magenta/models:basic_rnn_generate -- \
---experiment_run_dir=/tmp/basic_rnn/run1 \
---hparams='{"rnn_layer_sizes":[50]}' \
---primer_midi=$PRIMER_PATH \
---output_dir=/tmp/basic_rnn_generated \
+bazel run //magenta/models/lookback_rnn:lookback_rnn_generate -- \
+--run_dir=/tmp/lookback_rnn/logdir/run1 \
+--hparams="{'batch_size':64,'rnn_layer_sizes':[64,64]}" \
+--output_dir=/tmp/lookback_rnn/generated \
+--num_outputs=1 \
 --num_steps=640 \
---num_outputs=1
+--primer_melody="[60]"
 
 
 echo ""
 echo "Hopefully everything worked"
 echo "Look in the folder /tmp/basic_rnn_generated to see yout output"
 echo "I copy the files to Google Drive and use iCloud to play them, but try whatever works for you."
-
-
