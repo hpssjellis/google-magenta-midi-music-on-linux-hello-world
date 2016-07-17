@@ -6,12 +6,11 @@ MIDI_DIRECTORY=~/mymagenta/magenta/magenta/testdata
 # TFRecord file that will contain NoteSequence protocol buffers.
 SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
 
-bazel run //magenta:convert_midi_dir_to_note_sequences -- \
+
+bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
 --midi_dir=$MIDI_DIRECTORY \
 --output_file=$SEQUENCES_TFRECORD \
 --recursive
-
-
 
 
 
@@ -30,18 +29,17 @@ EVAL_DATA=/tmp/evaluation_melodies.tfrecord
 EVAL_RATIO=0.10
 
 # Name of the encoder to use. See magenta/lib/encoders.py.
-ENCODER=basic_one_hot_encoder
+#ENCODER=basic_one_hot_encoder
 
 
-bazel run //magenta/models:basic_rnn_create_dataset -- \
+
+
+
+bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 --input=$SEQUENCES_TFRECORD \
 --train_output=$TRAIN_DATA \
 --eval_output=$EVAL_DATA \
---eval_ratio=$EVAL_RATIO \
---encoder=$ENCODER
-
-
-
+--eval_ratio=$EVAL_RATIO
 
 
 
@@ -54,9 +52,7 @@ TRAIN_DATA=/tmp/training_melodies.tfrecord
 
 
 
-./bazel-bin/magenta/models/basic_rnn_train --experiment_run_dir=/tmp/basic_rnn/run1 --sequence_example_file=$TRAIN_DATA --eval=false --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=200
-
-
+./bazel-bin/magenta/models/basic_rnn/basic_rnn_train --run_dir=/tmp/basic_rnn/logdir/run1 --sequence_example_file=$TRAIN_DATA --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=200
 
 
 
@@ -81,5 +77,4 @@ echo ""
 echo "Hopefully everything worked"
 echo "Look in the folder /tmp/basic_rnn_generated to see yout output"
 echo "I copy the files to Google Drive and use iCloud to play them, but try whatever works for you."
-
 
