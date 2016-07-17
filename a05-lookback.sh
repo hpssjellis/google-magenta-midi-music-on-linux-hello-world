@@ -60,7 +60,15 @@ TRAIN_DATA=/tmp/training_melodies.tfrecord
 # Provide a MIDI file to use as a primer for the generation.
 # The MIDI should just contain a short monophonic melody.
 # primer.mid is provided as an example.
-PRIMER_PATH=~/mymagenta/magenta/magenta/models/basic_rnn/primer.mid
+
+# --primer_melody="[60, -2, 60, -2, 67, -2, 67, -2]" would prime the model with the first four notes of Twinkle Twinkle Little Star. 
+#Instead of using --primer_melody, 
+# we can use --primer_midi to prime our model with a melody stored in a MIDI file.
+
+#--primer_midi=~/mymagenta/magenta/magenta/models/basic_rnn/primer.mid
+
+
+
 
 bazel run //magenta/models/lookback_rnn:lookback_rnn_generate -- \
 --run_dir=/tmp/lookback_rnn/logdir/run1 \
