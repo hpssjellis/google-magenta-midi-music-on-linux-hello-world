@@ -244,9 +244,10 @@ cd ~/mymagenta/magenta
 echo "Might as well build the training file structure here"
 #bazel build //magenta/models:basic_rnn_train
 
-#changed jul15, 2016
+#changed jul15, 2016 The three types of rnn 
 bazel build //magenta/models/basic_rnn:basic_rnn_train
-
+bazel build //magenta/models/lookback_rnn:lookback_rnn_train
+bazel build //magenta/models/attention_rnn:attention_rnn_train
 
 echo "and setup a spot for temporary files"
 echo "not sure if magenta can make the folders for you????"
