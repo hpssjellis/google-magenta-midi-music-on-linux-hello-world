@@ -263,13 +263,13 @@ mkdir /tmp/attention_rnn/generated
 echo "Add a few symlinks to make life easier"
 
 #ln -s /tmp/basic_rnn_generated a-link-to-generated-midi
-ln -s ~/mymagenta/magenta/magenta/testdata a01-link-to-your-midi
-ln -s ~/mymagenta/magenta/magenta/models/shared a02-link-to-primer-midi
+ln -s ~/mymagenta/magenta/magenta/testdata aa01-link-to-your-midi
+ln -s ~/mymagenta/magenta/magenta/models/shared aa02-link-to-primer-midi
 
-ln -s /tmp a03-link-to-tmp-all-runs
-ln -s /tmp/basic_rnn/generated a04-link-to-basic_rnn-generated
-ln -s /tmp/lookback_rnn/generated a05-link-to-lookback-generated
-ln -s /tmp/attention_rnn/generated a06-link-to-attention-generated
+ln -s /tmp aa03-link-to-tmp-all-runs
+ln -s /tmp/basic_rnn/generated aa04-link-to-basic_rnn-generated
+ln -s /tmp/lookback_rnn/generated aa05-link-to-lookback-generated
+ln -s /tmp/attention_rnn/generated aa06-link-to-attention-generated
 
 
 
