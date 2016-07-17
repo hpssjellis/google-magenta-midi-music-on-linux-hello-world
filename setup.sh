@@ -209,7 +209,9 @@ echo "Now test if bazel is working and build ~1.5 Gb of files"
 
 cd ~/mymagenta/magenta
 
-bazel test //magenta:all
+
+# as of july 15, 2016 not sure if this still works
+#bazel test //magenta:all
 
 
 echo "If it all worked try these scripts"
@@ -240,7 +242,11 @@ cd ~/mymagenta/magenta
 
 
 echo "Might as well build the training file structure here"
-bazel build //magenta/models:basic_rnn_train
+#bazel build //magenta/models:basic_rnn_train
+
+#changed jul15, 2016
+bazel build //magenta/models/basic_rnn:basic_rnn_train
+
 
 echo "and setup a spot for temporary files"
 echo "not sure if magenta can make the folders for you????"
