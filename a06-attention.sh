@@ -51,7 +51,7 @@ TRAIN_DATA=/tmp/training_melodies.tfrecord
 --run_dir=/tmp/attention_rnn/logdir/run1 \
 --sequence_example_file=/tmp/attention_rnn/sequence_examples/training_melodies.tfrecord \
 --hparams="{'batch_size':64,'rnn_layer_sizes':[64,64]}" \
---num_training_steps=20000
+--num_training_steps=200
 
 
 
