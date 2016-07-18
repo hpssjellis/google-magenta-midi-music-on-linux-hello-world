@@ -253,7 +253,9 @@ echo "and setup a spot for temporary files"
 echo "not sure if magenta can make the folders for you????"
 
 
-mkdir /tmp/basic_rnn/generated
+mkdir /tmp/basic_rnn_generated
+mkdir /tmp/lookback_rnn
+mkdir /tmp/attention_rnn
 mkdir /tmp/lookback_rnn/generated
 mkdir /tmp/attention_rnn/generated
 
@@ -267,7 +269,7 @@ ln -s ~/mymagenta/magenta/magenta/testdata aa01-link-to-your-midi
 ln -s ~/mymagenta/magenta/magenta/models/shared aa02-link-to-primer-midi
 
 ln -s /tmp aa03-link-to-tmp-all-runs
-ln -s /tmp/basic_rnn/generated aa04-link-to-basic_rnn-generated
+ln -s /tmp/basic_rnn_generated aa04-link-to-basic_rnn-generated
 ln -s /tmp/lookback_rnn/generated aa05-link-to-lookback-generated
 ln -s /tmp/attention_rnn/generated aa06-link-to-attention-generated
 
