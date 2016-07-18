@@ -79,6 +79,4 @@ bazel run //magenta/models/lookback_rnn:lookback_rnn_generate -- \
 --primer_melody="[60]"
 
 
-echo ""
-echo "Look in the folder /tmp/basic_rnn_generated to see yout output"
 
