@@ -2,6 +2,14 @@
 Bash install scripts to get Google Magenta working easily on a linux ubuntu computer. Move from a folder with several midi files to a tensorflow generated set of output files. 
 
 
+July 17, 2016
+
+Due to changes in Magenta, these scripts have been updated. They are slightly different than the video, but work along the same idea. 
+
+
+
+
+
 
 June 19th, 2016
 
