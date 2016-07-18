@@ -82,7 +82,3 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --num_outputs=1 \
 --primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
 
-
-echo ""
-
-echo "Look in the folder /tmp/basic_rnn_generated to see yout output"
