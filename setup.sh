@@ -157,6 +157,11 @@ echo "Now install Google Magenta"
 
 git clone https://github.com/tensorflow/magenta.git
 
+#or using my github megenta test site
+
+#git clone https://github.com/hpssjellis/magenta.git
+
+
 
 #broken link to tensorflow???
 
