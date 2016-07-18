@@ -61,7 +61,7 @@ TRAIN_DATA=/tmp/training_melodies.tfrecord
 
 
 bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
---run_dir=/tmp/basic_rnn/run1 \
+--run_dir=/tmp/basic_rnn/logdir/run1 \
 --hparams='{"rnn_layer_sizes":[50]}' \
 --output_dir=/tmp/basic_rnn_generated \
 --num_steps=640 \
