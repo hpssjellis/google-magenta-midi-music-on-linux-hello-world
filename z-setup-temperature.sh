@@ -195,6 +195,7 @@ cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a03-extra-installs
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a04-midi-to-mp3.sh ~/mymagenta/magenta/a04-midi-to-mp3.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a05-lookback.sh ~/mymagenta/magenta/a05-lookback.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a06-attention.sh ~/mymagenta/magenta/a06-attention.sh
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a08-just-output.sh ~/mymagenta/magenta/a08-just-output.sh
 
 
 
