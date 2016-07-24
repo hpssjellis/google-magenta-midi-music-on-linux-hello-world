@@ -20,13 +20,14 @@ bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
 SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
 
 # TFRecord file that TensorFlow's SequenceExample protos will be written to. This is the training dataset.
-TRAIN_DATA=/tmp/training_melodies.tfrecord
+TRAIN_DATA=/tmp/lookback_rnn/sequence_examples/training_melodies.tfrecord
 
 # Optional evaluation dataset. Also, a TFRecord file containing SequenceExample protos.
-EVAL_DATA=/tmp/evaluation_melodies.tfrecord
+EVAL_DATA=/tmp/lookback_rnn/sequence_examples/eval_melodies.tfrecord
 
 # Fraction of input data that will be written to the eval dataset (if eval_output flag is set).
-EVAL_RATIO=0.10
+# normally set at 0.10
+EVAL_RATIO=0
 
 # Name of the encoder to use. See magenta/lib/encoders.py.
 #ENCODER=basic_one_hot_encoder
