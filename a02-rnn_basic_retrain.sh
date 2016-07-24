@@ -14,10 +14,10 @@ SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
 SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
 
 # TFRecord file that TensorFlow's SequenceExample protos will be written to. This is the training dataset.
-TRAIN_DATA=/tmp/lookback_rnn/sequence_examples/training_melodies.tfrecord
+TRAIN_DATA=/tmp/basic_rnn/sequence_examples/training_melodies.tfrecord
 
 # Optional evaluation dataset. Also, a TFRecord file containing SequenceExample protos.
-EVAL_DATA=/tmp/lookback_rnn/sequence_examples/eval_melodies.tfrecord
+EVAL_DATA=/tmp/basic_rnn/sequence_examples/eval_melodies.tfrecord
 
 # Fraction of input data that will be written to the eval dataset (if eval_output flag is set).
 # normally set at 0.10
