@@ -39,7 +39,9 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-ins
 
 echo "Presently these next two commands not working well. May have to do from the command line"
 
-sudo bash bazel-0.2.3-installer-linux-x86_64.sh --user
+#sudo bash bazel-0.2.3-installer-linux-x86_64.sh --user
+
+sudo bash bazel-0.3.0-installer-linux-x86_64.sh --user
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
 
 #export PATH=$PATH:~/bin
