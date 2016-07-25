@@ -3,9 +3,6 @@
 MIDI_DIRECTORY=~/mymagenta/magenta/magenta/testdata
 
 
-# TFRecord file that will contain NoteSequence protocol buffers.
-SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
-
 
 
 
