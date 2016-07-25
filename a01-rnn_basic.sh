@@ -47,8 +47,6 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 
 
 
-TRAIN_DATA=/tmp/training_melodies.tfrecord
-
 
 
 ./bazel-bin/magenta/models/basic_rnn/basic_rnn_train --run_dir=/tmp/basic_rnn/logdir/run1 --sequence_example_file=$TRAIN_DATA --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=200
