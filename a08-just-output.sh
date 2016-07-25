@@ -28,7 +28,7 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --output_dir=/tmp/basic_rnn_generated \
 --num_steps=640 \
 --num_outputs=1 \
---temperature=200 \
+--temperature=1 \
 --bpm=120
 
 
