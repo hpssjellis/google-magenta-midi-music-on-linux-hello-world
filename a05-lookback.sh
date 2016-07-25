@@ -45,7 +45,6 @@ bazel run //magenta/models/lookback_rnn:lookback_rnn_create_dataset -- \
 
 
 
-TRAIN_DATA=/tmp/training_melodies.tfrecord
 
 
 ./bazel-bin/magenta/models/lookback_rnn/lookback_rnn_train \
