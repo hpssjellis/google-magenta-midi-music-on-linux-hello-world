@@ -17,7 +17,7 @@ bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
 
 
 # TFRecord file containing NoteSequence protocol buffers from convert_midi_dir_to_note_sequences.py.
-SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
+#SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
 
 ## TFRecord file that TensorFlow's SequenceExample protos will be written to. This is the training dataset.
 TRAIN_DATA=/tmp/basic_rnn/sequence_examples/training_melodies.tfrecord
@@ -49,7 +49,7 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 
 
 
-./bazel-bin/magenta/models/basic_rnn/basic_rnn_train --run_dir=/tmp/basic_rnn/logdir/run1 --sequence_example_file=$TRAIN_DATA --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=200
+./bazel-bin/magenta/models/basic_rnn/basic_rnn_train --run_dir=/tmp/basic_rnn/logdir/run1 --sequence_example_file=$TRAIN_DATA --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=40
 
 
 
@@ -76,6 +76,8 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --hparams='{"rnn_layer_sizes":[50]}' \
 --output_dir=/tmp/basic_rnn_generated \
 --num_steps=640 \
---num_outputs=1 \
---primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
+--num_outputs=1 
+
+#\
+#--primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
 
