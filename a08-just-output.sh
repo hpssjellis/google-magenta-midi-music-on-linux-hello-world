@@ -29,6 +29,9 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --num_steps=640 \
 --num_outputs=1 \
 --temperature=200 \
---primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
+--bpm=120
+
+
+#--primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
 
 
