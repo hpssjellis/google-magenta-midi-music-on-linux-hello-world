@@ -43,8 +43,6 @@ bazel run //magenta/models/attention_rnn:attention_rnn_create_dataset -- \
 
 
 
-TRAIN_DATA=/tmp/training_melodies.tfrecord
-
 
 
 ./bazel-bin/magenta/models/attention_rnn/attention_rnn_train \
