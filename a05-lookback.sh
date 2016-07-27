@@ -34,14 +34,12 @@ EVAL_RATIO=0
 
 
 
+
+
 bazel run //magenta/models/lookback_rnn:lookback_rnn_create_dataset -- \
 --input=/tmp/notesequences.tfrecord \
---train_output=/tmp/lookback_rnn/sequence_examples/training_melodies.tfrecord \
---eval_output=/tmp/lookback_rnn/sequence_examples/eval_melodies.tfrecord \
---eval_ratio=0.10
-
-
-
+--output_dir=/tmp/lookback_rnn/sequence_examples \
+--eval_ratio=0
 
 
 
