@@ -61,9 +61,9 @@ printf "\n\nexport PATH=\$PATH:~/bin"  >> ~/.bashrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
 echo ""
-echo "Did bazel install? Should see the bazel help info"
-echo "Press enter, if issues press ctrl-C and find out the mistake, probably the path in ~/.bashrc"
-read
+#echo "Did bazel install? Should see the bazel help info"
+#echo "Press enter, if issues press ctrl-C and find out the mistake, probably the path in ~/.bashrc"
+#read
 
 
 
