@@ -16,7 +16,7 @@ DATASET_DIR=/tmp/basic_rnn/sequence_examples
 RUN_DIR=/tmp/basic_rnn/logdir/run1
 
 # Special parameters sent to train and generate your midi files, can be comma seperated
-HPARAMS='{"rnn_layer_sizes":[50]}'
+#HPARAMS='{"rnn_layer_sizes":[50]}'
 
 
 
@@ -45,7 +45,7 @@ bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
 # basic_rnn_create_dataset Creates the dataset for the rnn
 #--input=The file that the notesequences are stored in as a .tfrecord
 #--output_dir=Where training and evaluation datasets will be written.
-#--eval_ratio=Ratio of Training to evaluation datasets. Default 0.10
+#--eval_ratio=Ratio of Training to evaluation datasets
 
 
 bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
@@ -65,11 +65,9 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 #--num_training_steps=number of training loops
 
 
-./bazel-bin/magenta/models/basic_rnn/basic_rnn_train -- \
---run_dir=$RUN_DIR \
---sequence_example_file=$DATASET_DIR/training_melodies.tfrecord \
---hparams=$HPARAMS \
---num_training_steps=2000
+#This line likes to be all one line not split up likethe other ones
+
+./bazel-bin/magenta/models/basic_rnn/basic_rnn_train --run_dir=$RUN_DIR --sequence_example_file=$DATASET_DIR/training_melodies.tfrecord --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=2000
 
 
 
@@ -95,9 +93,10 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 #leave blank for the first note to be randomly generated
 
 
+
 bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
---run_dir=$RUN_DIR \
---hparams=$HPARAMS \
+--run_dir=/tmp/basic_rnn/logdir/run1 \
+--hparams='{"rnn_layer_sizes":[50]}' \
 --output_dir=/tmp/basic_rnn_generated \
 --num_steps=640 \
 --num_outputs=1 \
