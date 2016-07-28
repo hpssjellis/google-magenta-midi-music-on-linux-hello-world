@@ -22,17 +22,16 @@ HPARAMS='{"rnn_layer_sizes":[50]}'
 OUTPUT_MIDI_DIR=/tmp/basic_rnn_generated
 
 
-# --primer_melody="[60, -2, 60, -2, 67, -2, 67, -2]" would prime the model with the first four notes of Twinkle Twinkle Little Star. 
-#Instead of using --primer_melody, 
-# we can use --primer_midi to prime our model with a melody stored in a MIDI file.
-
-#--primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
-# --primer_melody="[60, -2, 60, -2, 67, -2, 67, -2]"
-
-# or leave it blank and a random first note will be chosen.
 
 
 #-----------------------------------------now the actual Bazel runs---------------------------------
+
+
+
+# convert_midi_dir_to_note_sequences  Converts all midi files in the folder into note sequences
+#--midi_dir=The directory that contains your midi files to run
+#--output_file=The file that the notesequences are stored in as a .tfrecord
+#--recursive so that it loops through all folders and all files in the midi-dir
 
 
 bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
@@ -41,6 +40,11 @@ bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
 --recursive
 
 
+
+# basic_rnn_create_dataset Creates the dataset for the rnn
+#--input=The file that the notesequences are stored in as a .tfrecord
+#--output_dir=Where training and evaluation datasets will be written.
+#--eval_ratio=Ratio of Training to evaluation datasets
 
 
 
@@ -57,6 +61,12 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 
 
 
+# basic_rnn_train 
+#--run_dir=location of the latest run and checkpoints
+#--sequence_example_file=location of the training melodies
+#--hparams=comma seperated list of hparameters
+#--num_training_steps=number of training loops
+
 
 ./bazel-bin/magenta/models/basic_rnn/basic_rnn_train -- \
 --run_dir=$RUN_DIR \
@@ -67,21 +77,14 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 
 
 
-
-# Provide a MIDI file to use as a primer for the generation.
-# The MIDI should just contain a short monophonic melody.
-
-# --primer_melody="[60, -2, 60, -2, 67, -2, 67, -2]" would prime the model with the first four notes of Twinkle Twinkle Little Star. 
-#Instead of using --primer_melody, 
-# we can use --primer_midi to prime our model with a melody stored in a MIDI file.
-
-#--primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
-# --primer_melody="[60, -2, 60, -2, 67, -2, 67, -2]"
-
-# or leave it blank and a random first note will be chosen.
-
-
-
+#bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
+#--run_dir=$RUN_DIR \
+#--hparams=$HPARAMS \
+#--output_dir=/tmp/basic_rnn_generated \
+#--num_steps=640 \
+#--num_outputs=1 \
+#--temperature=1 \
+#--bpm=120
 
 
 bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
