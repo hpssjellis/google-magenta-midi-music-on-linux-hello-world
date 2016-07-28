@@ -45,13 +45,13 @@ bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
 # basic_rnn_create_dataset Creates the dataset for the rnn
 #--input=The file that the notesequences are stored in as a .tfrecord
 #--output_dir=Where training and evaluation datasets will be written.
-#--eval_ratio=Ratio of Training to evaluation datasets
+#--eval_ratio=Ratio of Training to evaluation datasets. Default 0.10
 
 
 bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 --input=$SEQUENCES_TFRECORD \
 --output_dir=$DATASET_DIR \
---eval_ratio=$EVAL_RATIO
+--eval_ratio=0
 
 
 
