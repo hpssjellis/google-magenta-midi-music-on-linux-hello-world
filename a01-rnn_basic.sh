@@ -15,7 +15,7 @@ DATASET_DIR=/tmp/basic_rnn/sequence_examples
 # location of the latest run and checkpoints
 RUN_DIR=/tmp/basic_rnn/logdir/run1
 
-# Special parameters sent to train and generate your midi files
+# Special parameters sent to train and generate your midi files, can be comma seperated
 HPARAMS='{"rnn_layer_sizes":[50]}'
 
 # The directory where the final generated set of midi files will be saved 
