@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#when this file is saved as a01-rnn_basic.sh it can be run by typing (without the #) in the command line 
+# When this file is saved as a01-rnn_basic.sh it can be run by typing (without the #) in the command line 
 #bash a01-rnn_basic.sh
 
-#Variables are only used when they show up in multiple locations
+# Variables are only used when they show up in multiple locations
 
 
 # TFRecord file that will contain NoteSequence protocol buffers.
@@ -18,8 +18,6 @@ RUN_DIR=/tmp/basic_rnn/logdir/run1
 # Special parameters sent to train and generate your midi files, can be comma seperated
 HPARAMS='{"rnn_layer_sizes":[50]}'
 
-# The directory where the final generated set of midi files will be saved 
-OUTPUT_MIDI_DIR=/tmp/basic_rnn_generated
 
 
 
