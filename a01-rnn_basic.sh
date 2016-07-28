@@ -15,8 +15,8 @@ DATASET_DIR=/tmp/basic_rnn/sequence_examples
 # location of the latest run and checkpoints
 RUN_DIR=/tmp/basic_rnn/logdir/run1
 
-# Special parameters sent to train and generate your midi files, can be comma seperated
-#HPARAMS='{"rnn_layer_sizes":[50]}'
+# note that layers must be the same for training and generation runs
+HPARAMS_SET='{"rnn_layer_sizes":[50]}'
 
 
 
@@ -67,7 +67,14 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 
 #This line likes to be all one line not split up likethe other ones
 
-./bazel-bin/magenta/models/basic_rnn/basic_rnn_train --run_dir=$RUN_DIR --sequence_example_file=$DATASET_DIR/training_melodies.tfrecord --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=2000
+
+
+bazel run //magenta/models/basic_rnn:basic_rnn_train -- \
+--run_dir=$RUN_DIR \
+--sequence_example_file=$DATASET_DIR/training_melodies.tfrecord \
+--hparams=$HPARAMS_SET \
+
+#./bazel-bin/magenta/models/basic_rnn/basic_rnn_train --run_dir=$RUN_DIR --sequence_example_file=$DATASET_DIR/training_melodies.tfrecord --hparams='{"rnn_layer_sizes":[50]}' --num_training_steps=2000
 
 
 
@@ -96,7 +103,7 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 
 bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --run_dir=/tmp/basic_rnn/logdir/run1 \
---hparams='{"rnn_layer_sizes":[50]}' \
+--hparams=$HPARAMS_SET \
 --output_dir=/tmp/basic_rnn_generated \
 --num_steps=640 \
 --num_outputs=1 \
