@@ -24,9 +24,7 @@ OUTPUT_MIDI_DIR=/tmp/basic_rnn_generated
 
 
 
-#-----------------------------------------now the actual Bazel runs---------------------------------
-
-
+#--------------------------convert_midi_dir_to_note_sequences------------------------------------------------
 
 # convert_midi_dir_to_note_sequences  Converts all midi files in the folder into note sequences
 #--midi_dir=The directory that contains your midi files to run
@@ -41,11 +39,15 @@ bazel run //magenta/scripts:convert_midi_dir_to_note_sequences -- \
 
 
 
+
+
+
+#------------------------------basic_rnn_create_dataset--------------------------------------------
+
 # basic_rnn_create_dataset Creates the dataset for the rnn
 #--input=The file that the notesequences are stored in as a .tfrecord
 #--output_dir=Where training and evaluation datasets will be written.
 #--eval_ratio=Ratio of Training to evaluation datasets
-
 
 
 bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
@@ -56,10 +58,7 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 
 
 
-
-
-
-
+#-------------------------basic_rnn_train -------------------------------------------------
 
 # basic_rnn_train 
 #--run_dir=location of the latest run and checkpoints
@@ -77,6 +76,12 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 
 
 
+
+
+
+
+#----------------------basic_rnn_generate----------------------------------------------------
+
 #basic_rnn_generate Generates the output midi files
 #--run_dir=location of the latest run and checkpoints
 #--hparams=comma seperated list of hparameters
@@ -92,7 +97,6 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 #leave blank for the first note to be randomly generated
 
 
-
 bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --run_dir=$RUN_DIR \
 --hparams=$HPARAMS \
@@ -101,7 +105,6 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --num_outputs=1 \
 --temperature=1 \
 --bpm=120
-
 
 
 #\
