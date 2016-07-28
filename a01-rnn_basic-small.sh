@@ -32,10 +32,6 @@ OUTPUT_MIDI_DIR=/tmp/basic_rnn_generated
 # or leave it blank and a random first note will be chosen.
 
 
-# 
-$PRIMER_MIDI=~/mymagenta/magenta/magenta/models/shared/primer.mid
-
-
 #-----------------------------------------now the actual Bazel runs---------------------------------
 
 
@@ -91,7 +87,7 @@ bazel run //magenta/models/basic_rnn:basic_rnn_create_dataset -- \
 bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --run_dir=$RUN_DIR \
 --hparams=$HPARAMS \
---output_dir=$OUTPUT_MIDI_DIR \
+--output_dir=/tmp/basic_rnn_generated \
 --num_steps=640 \
 --num_outputs=1 \
 --temperature=1 \
@@ -100,7 +96,7 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 
 
 #\
-#--primer_midi=$PRIMER_MIDI
+#--primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
 #or 
 # --primer_melody="[60, -2, 60, -2, 67, -2, 67, -2]"
 # or leave it blank to randomly generate a starting note.
