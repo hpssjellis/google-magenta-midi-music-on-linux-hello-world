@@ -408,7 +408,7 @@ echo "If things don't seem correct ctrl-C to quit tensorboard, Note: this must b
 
 #tensorboard --logdir=/tmp/basic_rnn
 
-tensorboard --logdir=basic_rnn:/tmp/lookback_rnn,loopback:/tmp/lookback_rnn,attention:/tmp/attention_rnn
+tensorboard --logdir=basic_rnn:/tmp/basic_rnn,loopback:/tmp/lookback_rnn,attention:/tmp/attention_rnn
 
 
 
