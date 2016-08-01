@@ -32,7 +32,8 @@ sudo apt-get -y install oracle-java8-installer pkg-config zip g++ zlib1g-dev unz
 mkdir ~/mymagenta/bazel
 cd ~/mymagenta/bazel
 
-wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
+#wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
+wget https://github.com/bazelbuild/bazel/releases/download/0.3.0/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.3.0-installer-linux-x86_64.sh
 
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
