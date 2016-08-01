@@ -2,7 +2,9 @@
 Bash install scripts to get Google Magenta working easily on a linux ubuntu computer. Magenta will allow you to convert a folder with several of your midi files to an Artificial Intelligence tensorflow generated set of output midi files. 
 
 
-
+[![Instructional video at]
+(http://img.youtube.com/vi/RbF_7LQJ9Go/0.jpg)]
+(https://youtu.be/RbF_7LQJ9Go?list=PL57Dnr1H_egvXDT3NIne7YQY54Rx8fS6J)
 
 Update Aug 1st, 2016
 
