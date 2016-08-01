@@ -2,6 +2,39 @@
 Bash install scripts to get Google Magenta working easily on a linux ubuntu computer. Move from a folder with several midi files to a tensorflow generated set of output files. 
 
 
+
+
+Update Aug 1st, 2016
+
+Some of the bash files have been changed to keep up with the changes on the magenta repository. The steps are:
+
+1. basically open a terminal (right click-->open Terminal) and git clone this repo
+
+```
+git clone https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
+```
+
+2. Then go into the repository and run setup.sh (use auto fill so you don't have to type the long name)
+
+```
+cd google-magenta-midi-music-on-linux-hello-world
+
+bash setup.sh
+```
+
+
+3. To activate the other bash files you need to migrate to the magenta main folder
+``` 
+ cd ~/mymagenta/magenta
+```
+4. Then activate the other bash files. example
+```
+bash a01-rnn_basic.sh
+```
+
+
+
+
 July 17, 2016
 
 Due to changes in Magenta, these scripts have been updated. They are slightly different than the video, but work along the same idea. 
