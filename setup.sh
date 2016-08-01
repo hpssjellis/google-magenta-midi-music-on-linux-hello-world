@@ -33,7 +33,7 @@ mkdir ~/mymagenta/bazel
 cd ~/mymagenta/bazel
 
 #wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
-wget https://github.com/bazelbuild/bazel/releases/download/0.3.0/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.3.0-installer-linux-x86_64.sh
+#wget https://github.com/bazelbuild/bazel/releases/download/0.3.0/bazel-0.3.0-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.3.0-installer-linux-x86_64.sh
 
 
 wget https://github.com/bazelbuild/bazel/releases/download/0.3.1/bazel-0.3.1-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.3.1-installer-linux-x86_64.sh
@@ -56,7 +56,7 @@ export PATH="$PATH:~/bin"
 #rm bazel-0.2.3-installer-linux-x86_64.sh
 
 echo "Just test if bazel is working"
-
+rm bazel-0.3.1-installer-linux-x86_64.sh
 bazel -h
 
 
