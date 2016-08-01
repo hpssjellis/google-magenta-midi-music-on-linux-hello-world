@@ -126,13 +126,13 @@ Your final 5 midi examples end up in the **/tmp/basic_rnn_generated** folder and
 Then start using your own midi files and your own primer.mid file and change variables and iterations. I would like to make another helloWorld that tidies up where all these temporary files go, presently it is a mess for beginners
 
 1. To activate the other bash files you need to migrate to the magenta main folder
- 
-  cd ~/mymagenta/magenta
-
+``` 
+ cd ~/mymagenta/magenta
+```
 1. Then activate the other bash files. example
-
+```
 bash a01-rnn_basic.sh
-
+```
 
 
 
