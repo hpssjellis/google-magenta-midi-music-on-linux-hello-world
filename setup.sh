@@ -35,6 +35,12 @@ cd ~/mymagenta/bazel
 #wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
 wget https://github.com/bazelbuild/bazel/releases/download/0.3.0/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.3.0-installer-linux-x86_64.sh
 
+
+wget https://github.com/bazelbuild/bazel/releases/download/0.3.1/bazel-0.3.1-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.3.1-installer-linux-x86_64.sh
+
+
+
+
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
 
@@ -42,7 +48,7 @@ echo "Presently these next two commands not working well. May have to do from th
 
 #sudo bash bazel-0.2.3-installer-linux-x86_64.sh --user
 
-sudo bash bazel-0.3.0-installer-linux-x86_64.sh --user
+sudo bash bazel-0.3.1-installer-linux-x86_64.sh --user
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
 
 #export PATH=$PATH:~/bin
