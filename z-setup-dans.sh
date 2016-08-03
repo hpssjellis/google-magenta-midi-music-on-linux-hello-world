@@ -171,6 +171,12 @@ echo "Now install Google Magenta"
 # using Dan's github branch. Strangley does not work in the bash file need to do it seperately!
 #git clone https://github.com/danabo/magenta.git --branch basic_rnn_checkpoint_fix
 git clone https://github.com/danabo/magenta.git --branch random_primer
+echo "Did Dan's install, if not try this code on the command line from ~/mymagenta"
+echo "git clone https://github.com/danabo/magenta.git --branch random_primer"
+read
+
+
+
 
 #or using my github megenta test site
 #git clone https://github.com/hpssjellis/magenta.git
