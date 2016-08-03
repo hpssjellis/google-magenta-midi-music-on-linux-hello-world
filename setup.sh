@@ -161,6 +161,7 @@ echo ". "
 
 cd ~/mymagenta
 
+#-----------------------------------------------------------------------------------------
 
 echo "Now install Google Magenta"
 
@@ -168,16 +169,13 @@ git clone https://github.com/tensorflow/magenta.git
 
 
 # using Dan's github branch. Strangley does not work in the bash file need to do it seperately!
-
 #git clone https://github.com/danabo/magenta.git --branch basic_rnn_checkpoint_fix
-
-
+#git clone https://github.com/danabo/magenta.git --branch random_primer
 
 #or using my github megenta test site
-
 #git clone https://github.com/hpssjellis/magenta.git
 
-
+#-----------------------------------------------------------------------------------------------------
 
 #broken link to tensorflow???
 
