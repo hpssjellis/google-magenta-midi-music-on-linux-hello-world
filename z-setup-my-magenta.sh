@@ -169,8 +169,8 @@ echo "Now install Google Magenta"
 
 
 #or using my github megenta test site
-
-git clone https://github.com/hpssjellis/magenta.git
+#git clone https://github.com/hpssjellis/magenta.git 
+git clone https://github.com/hpssjellis/magenta.git --branch random_primer
 
 
 #now using Elliot's site
