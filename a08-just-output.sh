@@ -18,8 +18,10 @@
 
 # or leave it blank and a random first note will be chosen.
 
-# --log Valid values: DEBUG, INFO (default), WARN, ERROR, or FATAL.
-
+#Optionals
+# --temperature=1 randomness of the generated output
+# --bpm=beats per minute
+# --log=INFO Valid values: DEBUG, INFO (default), WARN, ERROR, or FATAL.
 
 
 
@@ -35,5 +37,5 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 
 
 #--primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
-
+#--primer_melody="[60, -2, 60, -2, 67, -2, 67, -2]"
 
