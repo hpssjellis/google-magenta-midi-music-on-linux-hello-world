@@ -31,7 +31,7 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --num_outputs=1 \
 --temperature=1 \
 --bpm=120 \
---log=INFO
+--log=DEBUG
 
 
 #--primer_midi=~/mymagenta/magenta/magenta/models/shared/primer.mid
