@@ -164,7 +164,10 @@ echo "Now install Google Magenta"
 
 # using Dan's github branch. Strangley does not work in the bash file need to do it seperately!
 
-git clone https://github.com/danabo/magenta.git
+#git clone https://github.com/danabo/magenta.git
+
+# may have to do manually
+git clone https://github.com/danabo/magenta.git --branch random_primer
 
 
 
@@ -186,7 +189,7 @@ git clone https://github.com/danabo/magenta.git
 echo "Grab my github site to load a few bash files"
 cd ~/mymagenta
 
-git clone https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
+#git clone https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
 
 
 echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
