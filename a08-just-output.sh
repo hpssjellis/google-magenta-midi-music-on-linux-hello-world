@@ -18,6 +18,7 @@
 
 # or leave it blank and a random first note will be chosen.
 
+# --log Valid values: DEBUG, INFO (default), WARN, ERROR, or FATAL.
 
 
 
