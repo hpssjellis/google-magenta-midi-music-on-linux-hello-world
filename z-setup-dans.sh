@@ -32,7 +32,14 @@ sudo apt-get -y install oracle-java8-installer pkg-config zip g++ zlib1g-dev unz
 mkdir ~/mymagenta/bazel
 cd ~/mymagenta/bazel
 
-wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
+#wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
+#wget https://github.com/bazelbuild/bazel/releases/download/0.3.0/bazel-0.3.0-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.3.0-installer-linux-x86_64.sh
+
+
+wget https://github.com/bazelbuild/bazel/releases/download/0.3.1/bazel-0.3.1-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.3.1-installer-linux-x86_64.sh
+
+
+
 
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
@@ -41,9 +48,7 @@ echo "Presently these next two commands not working well. May have to do from th
 
 #sudo bash bazel-0.2.3-installer-linux-x86_64.sh --user
 
-
-sudo bash bazel-0.3.0-installer-linux-x86_64.sh --user
-
+sudo bash bazel-0.3.1-installer-linux-x86_64.sh --user
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
 
 #export PATH=$PATH:~/bin
@@ -51,7 +56,7 @@ export PATH="$PATH:~/bin"
 #rm bazel-0.2.3-installer-linux-x86_64.sh
 
 echo "Just test if bazel is working"
-
+rm bazel-0.3.1-installer-linux-x86_64.sh
 bazel -h
 
 
@@ -60,7 +65,7 @@ echo "Needed if you open a new terminal to reset the path to bazel"
 printf "\n\nexport PATH=\$PATH:~/bin"  >> ~/.bashrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
-echo ""
+#echo ""
 #echo "Did bazel install? Should see the bazel help info"
 #echo "Press enter, if issues press ctrl-C and find out the mistake, probably the path in ~/.bashrc"
 #read
@@ -156,6 +161,7 @@ echo ". "
 
 cd ~/mymagenta
 
+#-----------------------------------------------------------------------------------------
 
 echo "Now install Google Magenta"
 
@@ -163,22 +169,13 @@ echo "Now install Google Magenta"
 
 
 # using Dan's github branch. Strangley does not work in the bash file need to do it seperately!
-
-#git clone https://github.com/danabo/magenta.git
-
-# may have to do manually
+#git clone https://github.com/danabo/magenta.git --branch basic_rnn_checkpoint_fix
 git clone https://github.com/danabo/magenta.git --branch random_primer
 
-
-
 #or using my github megenta test site
-
 #git clone https://github.com/hpssjellis/magenta.git
 
-
-#now using Elliot's site
-#git clone https://github.com/elliotwaite/magenta
-
+#-----------------------------------------------------------------------------------------------------
 
 #broken link to tensorflow???
 
@@ -189,7 +186,7 @@ git clone https://github.com/danabo/magenta.git --branch random_primer
 echo "Grab my github site to load a few bash files"
 cd ~/mymagenta
 
-#git clone https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
+git clone https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world.git
 
 
 echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
@@ -202,11 +199,12 @@ echo "copy the bash file a01-helloworld.sh to the magenta workspace folder"
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a01-rnn_basic.sh ~/mymagenta/magenta/a01-rnn_basic.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a02-rnn_basic_retrain.sh  ~/mymagenta/magenta/a02-rnn_basic_retrain.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a03-extra-installs.sh ~/mymagenta/magenta/a03-extra-installs.sh
+
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a04-midi-to-mp3.sh ~/mymagenta/magenta/a04-midi-to-mp3.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a05-lookback.sh ~/mymagenta/magenta/a05-lookback.sh
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a06-attention.sh ~/mymagenta/magenta/a06-attention.sh
-cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a08-just-output.sh ~/mymagenta/magenta/a08-just-output.sh
 
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a08-just-output.sh ~/mymagenta/magenta/a08-just-output.sh
 
 
 
@@ -413,7 +411,13 @@ echo "tensorboard command is"
 echo "tensorboard --logdir=/tmp/basic_rnn"
 echo "If things don't seem correct ctrl-C to quit tensorboard, Note: this must be the last command in this batch file"
 
-tensorboard --logdir=/tmp/basic_rnn
+#tensorboard --logdir=/tmp/basic_rnn
+
+tensorboard --logdir=basic_rnn:/tmp/basic_rnn,loopback:/tmp/lookback_rnn,attention:/tmp/attention_rnn
+
+
+
+
 
 
 
