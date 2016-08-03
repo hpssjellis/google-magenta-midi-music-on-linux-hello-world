@@ -1,5 +1,8 @@
 bash
 
+#I have heard it works better from the power shell?
+
+
 #do some checks
 git --version
 nano --version
@@ -67,7 +70,10 @@ rm -f go
 
 sudo apt-get upgrade
 
+lsb_release -a
+
 
 #if you screw up bash, type into a windows command shell.
+#This will delete all your changes to bash and windows ubuntu 
 
 lxrun /uninstall /full 
