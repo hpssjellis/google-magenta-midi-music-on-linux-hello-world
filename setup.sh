@@ -116,9 +116,10 @@ cd ~/mymagenta
 #new version 0.9 needed for magenta
 
 
-sudo pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.9.0rc0-cp27-none-linux_x86_64.whl
+#sudo pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.9.0rc0-cp27-none-linux_x86_64.whl
 
-
+#About Aug 7 , 2016 upgraded to version 10
+sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0rc0-cp27-none-linux_x86_64.whl
 
 
 #echo "Now download the image sets this was needed for my tensorflow repository"
