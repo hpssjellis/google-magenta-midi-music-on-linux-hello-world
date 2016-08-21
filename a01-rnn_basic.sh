@@ -91,6 +91,7 @@ bazel run //magenta/models/basic_rnn:basic_rnn_train -- \
 #--num_outputs Number of midi files generated
 #--temperature Randomness of outputted song. Default = 1, higher numbers for more random songs
 #--bpm  Beats per minute for the output songs. Default 120 bpm
+#--log-INFO is the default.Others in order are  DEBUG, INFO, WARN, ERROR, or FATAL 
 #--primer_midi A small midi file that starts each outputted midi fie
 #or
 # --primer_melody Strange format for writing small midi style songs
@@ -106,7 +107,9 @@ bazel run //magenta/models/basic_rnn:basic_rnn_generate -- \
 --num_steps=640 \
 --num_outputs=1 \
 --temperature=1 \
---bpm=120
+--bpm=30 \
+--log=DEBUG \
+--primer_melody="[60, -2, 60, -2, 67, -2, 67, -2]"
 
 
 #\
