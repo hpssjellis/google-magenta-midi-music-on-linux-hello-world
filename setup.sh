@@ -269,6 +269,15 @@ cd ~/mymagenta/magenta
 
 
 
+
+echo "perhaps install a few things magenta seems to want"
+pip install matplotlib scipy IPython
+
+
+
+
+
+
 echo "Might as well build the training file structure here"
 #bazel build //magenta/models:basic_rnn_train
 
