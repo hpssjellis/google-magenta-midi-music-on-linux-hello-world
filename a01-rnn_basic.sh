@@ -13,9 +13,9 @@ echo "Command 'pwd' gives you your folder full path"
 echo "Enter the folder path that magenta was cloned to"
 
 
-#read MAIN_PATH
+read MAIN_PATH
 
-MAIN_PATH=~/mymagenta
+#MAIN_PATH=~/mymagenta
 
 
 
