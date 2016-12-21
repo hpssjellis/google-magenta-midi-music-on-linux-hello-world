@@ -271,7 +271,7 @@ cd ~/mymagenta/magenta
 
 
 echo "perhaps install a few things magenta seems to want"
-pip install matplotlib scipy IPython
+pip install jupyter matplotlib scipy
 
 
 
