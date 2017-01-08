@@ -212,9 +212,10 @@ cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a05-lookback.sh ~/
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a06-attention.sh ~/mymagenta/magenta/a06-attention.sh
 
 cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a08-just-output.sh ~/mymagenta/magenta/a08-just-output.sh
+cp ~/mymagenta/google-magenta-midi-music-on-linux-hello-world/a11-clean-bazel.sh ~/mymagenta/magenta/a11-clean-bazel.sh
 
 
-
+ 	
 
 
 
