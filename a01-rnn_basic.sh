@@ -8,14 +8,17 @@
 
 # Only use variables for information in more than one Bazel run!
 
-echo "Either comment out the read and hard code the main path or"
-echo "Command 'pwd' gives you your folder full path"
-echo "Enter the folder path that magenta was cloned to"
 
 
-read MAIN_PATH
+echo "Assuming Magenta was installed into the ~/mymagenta folder, if not fix MAIN_PATH variable below";
+MAIN_PATH=~/mymagenta
 
-#MAIN_PATH=~/mymagenta
+#echo "Either comment out the read and hard code the main path or"
+#echo "Command 'pwd' gives you your folder full path"
+#echo "Enter the folder path that magenta was cloned to"
+#read MAIN_PATH
+
+
 
 
 
