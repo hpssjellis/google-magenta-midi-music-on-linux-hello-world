@@ -126,7 +126,11 @@ cd ~/mymagenta
 sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.0rc1-cp27-none-linux_x86_64.whl
 
 
+echo "perhaps install a few things magenta seems to wantwith the newer version"
+#pip install magenta jupyter matplotlib scipy
 
+
+pip install jupyter scipy
 
 #echo "Now download the image sets this was needed for my tensorflow repository"
 
@@ -271,8 +275,6 @@ cd ~/mymagenta/magenta
 
 
 
-echo "perhaps install a few things magenta seems to want"
-pip install magenta jupyter matplotlib scipy
 
 
 
